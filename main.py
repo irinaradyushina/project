@@ -5,12 +5,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def load():
-    s = ['список-ссылок для перехода к следующим страничкам:',
+    sp = ['список-ссылок для перехода к следующим страничкам:',
          'http://127.0.0.1:8080/miss',
          'http://127.0.0.1:8080/index',
          'http://127.0.0.1:8080/promotion',
          'http://127.0.0.1:8080/image']
-    return '</br>'.join(s)
+    return '</br>'.join(sp)
 
 @app.route('/miss')
 def test():
