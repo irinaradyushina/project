@@ -4,6 +4,15 @@ app = Flask(__name__)
 
 
 @app.route('/')
+def load():
+    s = ['список-ссылок для перехода к следующим страничкам:',
+         'http://127.0.0.1:8080/miss',
+         'http://127.0.0.1:8080/index',
+         'http://127.0.0.1:8080/promotion',
+         'http://127.0.0.1:8080/image']
+    return '</br>'.join(s)
+
+@app.route('/miss')
 def test():
     return "Миссия поиски Атлантиды"
 
@@ -32,6 +41,7 @@ def image_mars():
                     <h1>Таинственный остров-государство</h1>
                     <<img src="https://hi-news.ru/wp-content/uploads/2017/07/Atlantis-750x422.png"
                      alt="здесь должна была быть картинка, но не нашлась">>
+                     <p>Вот какой удивительный остров</p>
                   </body>
                 </html>"""
 
